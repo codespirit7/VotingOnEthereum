@@ -1,38 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: floralwhite;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: floralwhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*         // {   Verify and Login  } //           */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2.5vw;
+  width: 350px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content .img {
+  width: 180px;
+  height: 250px;
+}
+
+.content .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1vw;
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    row-gap: 2rem;
+  }
+  .content form {
+    row-gap: 2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*       // {   Verify and Login  } //          */
+
+/*   //  {  ADMIN PANEL AND VOTING PANEL  }  //   */
+
+.v_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* { head } */
+.v_head {
+  width: inherit;
+  height: 15%;
+  background-color: orange;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.heading {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.heading > img {
+  width: 65px;
+  height: 85px;
+}
+.heading > span {
+  font-size: 2.5rem;
+}
+/* { head } */
+
+/* {mid} */
+.v_mid {
+  /* background-color: red; */
+  width: inherit;
+  height: 75%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*  {mid}  */
+
+/* { footer } */
+.v_footer {
+  background-color: green;
+  width: inherit;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.v_footer > span {
   color: white;
 }
+/* { footer } */
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 480px) {
+  /* .v_wrapper {
+    padding: 0.4rem;
+  } */
+  .heading {
+    gap: 1rem;
+  }
+  .heading > span {
+    font-size: 1.5rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*   //  {  ADMIN PANEL AND VOTING PANEL  }  //   */
